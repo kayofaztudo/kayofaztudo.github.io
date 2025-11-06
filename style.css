@@ -171,9 +171,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .local{
-    transform: translate( -50%, 55%) !important;
+    transform: translate(-50%, -25%);
   }
 }
 
@@ -256,7 +255,7 @@ body{
   border-radius: 100px;
   background: linear-gradient(to right, #8B0000, #A01E07);
   width: max-content;
-  z-index: 3;
+  z-index: 9999;
 }
 
 .titulo-intro {
@@ -299,6 +298,8 @@ body{
 .imagem-intro-content img {
   height: 90%;
   width: auto;
+  position: relative;
+  z-index: 1;
   border-radius: 10px;
   filter: drop-shadow(8px 0 4px #000);
 }
@@ -312,11 +313,13 @@ body{
   .texto-intro-content{
     width: 100%;
     height: 50%;
+    max-height: 50vh;
+    margin: 0px;
     justify-content: end;
     transform: translateY(-10%);
   }
   .imagem-intro-content {
-    margin-top: 0px;
+    margin-top: 0px !important;
     height: 50%;
     width: 100%;
   }
