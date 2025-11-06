@@ -315,6 +315,7 @@ body{
     height: 50%;
     max-height: 50vh;
     margin: 0px;
+    padding-bottom: 15px;
     justify-content: end;
     transform: translateY(-10%);
   }
