@@ -173,7 +173,7 @@ body{
   }
 
   .local{
-    transform: translateY(0) !important;
+    transform: translate( -50%, 55%) !important;
   }
 }
 
