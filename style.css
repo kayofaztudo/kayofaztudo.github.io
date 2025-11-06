@@ -1,0 +1,419 @@
+/* FONTE 0 */
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+.inspiration-font {font-family: "Inspiration", cursive !important; font-weight: 400; font-style: normal;}
+
+/* FONTE PRIMARIA */
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+.gravitas-font {font-family: "Gravitas One",serif !important;font-weight: 400;font-style: normal;}
+
+/* FONTE SEGUNDARIA */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+.cormorant-font {font-family: "Cormorant Garamond", serif !important;font-optical-sizing: auto !important;font-weight: 400;font-style: normal;}
+
+body{
+  position: relative;
+}
+
+/* "Tecnica OVERBROWSER" :) */
+*{padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+
+
+/*****/
+/* butao du zapi zapikkk*/
+/*****/
+
+.btn-zap {
+  position: fixed;
+  display: flex;
+  width: auto;
+  padding: clamp(4px, 1.5vw, 10px) clamp(8px, 2vw, 14px);
+  bottom: 0;
+  right: 0;
+  z-index: 9999999;
+  transform: translate(-5%, -25%);
+  background-color: #00cf00;
+  box-shadow: 0 2px 8px rgba(71, 250, 0, 0.781);
+  gap: clamp(6px, 1vw, 10px);
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .btn-zap:hover {
+    transform: translate(-5%, -25%) scale(1.03);
+    background-color: #01c401;
+    box-shadow: 0 0px 8px rgba(72, 255, 0);
+  }
+  .btn-zap:hover > img {
+    filter: drop-shadow(0 0 4px #1c4600);
+  }
+}
+
+.btn-zap img {
+  width: clamp(26px, 4vw, 35px);
+  filter: drop-shadow(0 0 8px #000);
+  height: clamp(26px, 4vw, 35px);
+}
+
+.btn-zap h2,
+.btn-zap a {
+  text-decoration: none;
+  font-style: none;
+  color: white;
+  font-size: clamp(16px, 2.5vw, 22px);
+  text-shadow: 0 0 4px #000;
+}
+
+
+@keyframes zoom-in-out {
+  0%{
+    transform: translate(-5%, -25%) scale(1.0);
+  }
+  50%{
+    transform: translate(-5%, -25%) scale(1.055);
+  }
+  100%{
+    transform: translate(-5%, -25%) scale(1.0);
+  }
+}
+
+
+@media (max-width: 400px) {
+  .btn-zap {
+    padding: 0;
+    right: 10px;
+    box-shadow: 0 0 6px green;
+    animation: zoom-in-out 1.2s ease infinite;
+  }
+  .btn-zap img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-zap h2,
+  .btn-zap a {
+    display: none;
+  }
+}
+
+
+
+
+
+/***************************/
+/*          HEADER         */
+/***************************/
+
+
+.header {
+  background-color: #0d5ea5; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: clamp(0.6rem, 2vw, 1rem) clamp(1rem, 4vw, 2.5rem);
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  user-select: none;
+  border: rgb(0, 43, 99) 4px solid;
+  box-shadow: inset 0 0 8px #000;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Título */
+.titulo-h {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #ffffff;
+  text-shadow: black 0 0 8px;
+  font-weight: 600 !important;
+  letter-spacing: clamp(0.5px, 0.5vw, 6px);
+  user-select: none;
+}
+
+
+
+/* Navegação */
+.nav-h {
+  display: flex;
+  gap: clamp(0.4rem, 4vw, 2rem);
+}
+
+.nav-h a {
+  color: #ffffff;
+  font-size: clamp(0.87rem, 1.4vw, 1.4rem);
+  font-weight: 500;
+  transition: opacity 0.3s, transform 0.2s, text-shadow 0.3s;
+}
+
+.nav-h a:hover {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  transform: scale(1.02);
+  opacity: 0.85;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .titulo-h{
+    margin: 2px 0px;
+  } 
+
+  .nav-h {
+    margin-top: clamp(0.5rem, 2vw, 1rem);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .local{
+    transform: translateY(0);
+  }
+}
+
+
+/***************************/
+/*        INTRODUÇÃO       */
+/***************************/
+
+
+/* Seção principal */
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Imagem de fundo */
+.fundo {
+  position: absolute;
+  inset: 0; 
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fundo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;    
+  filter: brightness(0.45); 
+}
+
+
+/* Conteúdo principal */
+.intro-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+}
+
+/* Texto */
+.texto-intro-content {
+  width: 50%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: white;
+}
+
+.local {
+  position: absolute;
+  bottom: 0;
+  left: 50%;  
+  font-size: clamp(0.7rem, 1.6vw, 1.3rem);
+  color: white;
+  font-weight: 700;
+  padding: 8px 12px;
+  transform: translate(-50%, calc(50% + clamp(5px, 1.5vw, 15px)));
+  box-shadow: inset 0 0 8px #000, 0 0 4px #000;
+  align-content: center;
+  border-radius: 100px;
+  background: linear-gradient(to right, #8B0000, #A01E07);
+  width: max-content;
+  z-index: 3;
+}
+
+.titulo-intro {
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 700;
+  text-shadow: 0 0 6px #f1f3ff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.desc-intro {
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.4rem);
+  margin-bottom: 20px;
+  color: #f1f1f1;
+  text-shadow: 0 0 6px #bbc4f8;
+  text-align: center;
+}
+
+
+.banner {
+  display: none;
+  background-color: #06d6a0;
+  max-width: max-content;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.imagem-intro-content{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* Imagem lateral (opcional) */
+.imagem-intro-content img {
+  height: 100%;
+  width: auto;
+  border-radius: 10px;
+  filter: drop-shadow(8px 0 4px #000);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+    justify-content: space-around !important;
+  }
+  .texto-intro-content{
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+  }
+
+  .imagem-intro-content {
+    margin-top: 22px;
+    height: 50%;
+    width: 100%;
+  }
+  .imagem-intro-content img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+
+/**************************/
+/*        SOBRE MIM        */
+/**************************/
+
+.sobre-mim {
+  background-color: #0d5ea5;
+  color: #ffffff;
+  display: flex;
+  box-shadow: inset 0px 2px 8px #000;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: clamp(2rem, 4vw, 3.4rem) clamp(1rem, 2vw, 2.5rem);
+  min-height: 50vh;
+}
+
+/* título */
+.sobre-mim h2 {
+  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  margin-bottom: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-inline-start: clamp(0.5rem, 2vw, 2rem);
+}
+
+/* texto */
+.sobre-mim p {
+  font-size: clamp(1rem, 1.6vw, 1.58rem);
+  line-height: 1.7;
+  max-width: 100%;
+  padding-inline-start: clamp(0.5rem, 2vw, 2rem);
+  margin-top: calc(clamp(0.5rem, 1vw, 1rem));
+  opacity: 0.95;
+}
+
+@media (max-width: 720px) {
+    .sobre-mim p {
+      text-align: justify;
+    }
+}
+
+
+
+/**************************/
+/*         FOOTER          */
+/**************************/
+
+
+
+footer {
+  background:linear-gradient(to right, #252525, #202020);
+  box-shadow: inset 0 0 8px rgb(0, 0, 0);
+  color: #ffffff;
+  text-align: center;
+  padding: clamp(0.3rem, 3vh, 0.8rem) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(clamp(0.5rem, 1vw, 1rem));
+}
+
+footer a{
+  text-decoration:underline;
+  color: rgb(243, 6, 6);
+}
+
+
+/* texto principal */
+footer p {
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+footer article {
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+  opacity: 0.9;
+  margin: 0;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+
+footer article:hover {
+  opacity: 1;
+}
